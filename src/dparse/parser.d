@@ -3084,6 +3084,7 @@ class Parser
                     advance();
                     if (InStatement s = parseContractExpression!InStatement())
                     {
+                        s.isExpression = true;
                         s.inTokenLocation = inTokenLocation;
                         inStatements.put(s);
                     }
@@ -3127,6 +3128,7 @@ class Parser
                     }
                     if (OutStatement s = parseContractExpression!OutStatement())
                     {
+                        s.isExpression = true;
                         s.outTokenLocation = outTokenLocation;
                         outStatements.put(s);
                     }

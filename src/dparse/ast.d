@@ -1927,6 +1927,7 @@ final class InStatement : ASTNode
     {
         mixin (visitIfNotNull!(blockStatement));
     }
+    /** */ bool isExpression;
     /** */ size_t inTokenLocation;
     /** */ BlockStatement blockStatement;
     mixin OpEquals;
@@ -2294,6 +2295,7 @@ final class OutStatement : ASTNode
     {
         mixin (visitIfNotNull!(parameter, blockStatement));
     }
+    /** */ bool isExpression;
     /** */ size_t outTokenLocation;
     /** */ Token parameter;
     /** */ BlockStatement blockStatement;
